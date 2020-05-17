@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+ <html>
+   <head> 
+      <title>WebRTC Video Demo</title>
+      <meta charset="utf-8">
+      <meta name="description" content="WebRTC reference app">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  	  <meta name="mobile-web-app-capable" content="yes">
+      <link rel = "stylesheet" href = "node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+     
+   </head>
+	
+   <style>
+	
+      body { 
+         background: #eee; 
+         padding: 5% 0; 
+      } 
+		
+      video { 
+         background: black; 
+         border: 1px solid gray; 
+      }
+		
+      .call-page { 
+         position: relative; 
+         display: block; 
+         margin: 0 auto; 
+         width: 500px; 
+         height: 500px; 
+      } 
+		
+      #localVideo { 
+         width: 150px; 
+         height: 150px; 
+         position: absolute; 
+         top: 15px; 
+         right: 15px; 
+      }
+		
+      #remoteVideo { 
+         width: 500px; 
+         height: 500px; 
+      }
+		
+   </style>
+	
+   <body>
+   <div id = "callPage" class = "call-page"> 
+      <video id = "localVideo" autoplay playsinline></video> 
+      <video id = "remoteVideo" autoplay playsinline></video>
+		
+      <div class = "row text-center"> 
+         <div class = "col-md-12"> 
+            <button id = "callBtn" class = "btn-success btn" onclick="start()">Call</button> 
+            <button id = "hangUpBtn" class = "btn-danger btn">Hang Up</button> 
+         </div>	
+      </div> 
+		
+   </div>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+   <script src = "client.js"></script> 
+
+   </body>
+	
+</html>		  
